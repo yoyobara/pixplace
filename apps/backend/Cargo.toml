@@ -3,8 +3,9 @@ name = "backend"
 version = "0.1.0"
 edition = "2021"
 
-
 [dependencies]
-
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+sqlx = { version = "0.8", features = [ "runtime-tokio", "tls-rustls", "postgres", "chrono", "uuid" ] }
+tokio = { version = "1", features = ["full"] }
+dotenvy = "0.15"
+chrono = { version = "0.4", features = ["serde"] }
+serde = { version = "1.0", features = ["derive"] }
